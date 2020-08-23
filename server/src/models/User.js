@@ -7,6 +7,9 @@ const User = (sequelize, DataTypes) => {
         masterpassword: {
             type: DataTypes.STRING
         },
+        encryptionSalt: {
+            type: DataTypes.STRING
+        },
         remainder: {
             type: DataTypes.STRING
         }

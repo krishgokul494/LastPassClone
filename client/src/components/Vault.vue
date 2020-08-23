@@ -1,42 +1,6 @@
 <template>
   <div class="">
-    <pre>
-      <h3 v-show="success">Register Success</h3>
-      <h1>Register</h1>
-      <input 
-        type="email"
-        name="email"
-        placeholder="Email"
-        v-model="email"
-      />
-      <br>
-      <input 
-        type="text"
-        name="masterpassword"
-        pattern="/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,32}$/"
-        placeholder="Master Password"
-        v-model="masterpassword"
-      />
-      <br>
-      <input 
-        type="text"
-        name="confirmmpwd"
-        placeholder="Confirm Master Password"
-        v-model="confirmmpwd"
-      />
-      <br>
-      <input 
-        type="text"
-        name="remainder"
-        placeholder="Remainder (optional)"
-        v-model="remainder"
-      />
-      <br>
-      <div v-html="error"></div>
-      <button
-        @click="register"
-      >Create Account</button>
-    </pre>
+    <h1>Vault</h1>
   </div>
 </template>
 
