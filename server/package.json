@@ -2,7 +2,7 @@
   "name": "server",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "start": "nodemon src/app.js --exec \"npm run lint && node\"",
     "lint": "eslint src/**/*.js",
@@ -29,5 +29,8 @@
     "nodemon": "^2.0.4",
     "eslint": "^7.6.0",
     "eslint-plugin-vue": "^6.2.2"
+  },
+  "engines": {
+    "node": "14.x"
   }
 }
