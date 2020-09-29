@@ -18,21 +18,21 @@
 //         }).catch(error => {
 //             res.status(404).send(error)
 //         })
-    
+	
 //     console.log(user_id)
 //     passport.serializeUser(function(user_id, done) {
 //         done(null, user_id);
 //     });
-    
+	
 //     passport.deserializeUser(function(user_id, done) {
 //         done(null, user_id);
 //     });
 // }
 
 const login = (req, res) => {
-    res.send('logged in')
+	res.send('logged in')
 }
 
 module.exports = {
-    login
+	login
 }

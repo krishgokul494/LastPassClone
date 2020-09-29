@@ -4,43 +4,43 @@ const User = require('../models').user
 
 
 passport.use(
-    new LocalStrategy({
-        usernameField: "email",
-        passwordField: "masterpassword"
-    }, async (username, password, done) => {
-        console.log(username)
-        console.log(password)
-        await User.findOne({where: {email: username}}).then(user => {
-            if(!user){
-                console.log('username')
-                return done(null, false, {message: "Invalid Email"})
-            }
-            if(user.masterpassword !== password){
-                console.log('password')
-                console.log(user.masterpassword)
-                return done(null, false, {message: "Invalid Password"})
-            }
-            console.log('logged')
-            return done(null, user)
-        }).catch(err => {
-            console.log(err)
-            done(err)
-        })
-    })
+	new LocalStrategy({
+		usernameField: "email",
+		passwordField: "masterpassword"
+	}, async (username, password, done) => {
+		console.log(username)
+		console.log(password)
+		await User.findOne({where: {email: username}}).then(user => {
+			if(!user){
+				console.log('username')
+				return done(null, false, {message: "Invalid Email"})
+			}
+			if(user.masterpassword !== password){
+				console.log('password')
+				console.log(user.masterpassword)
+				return done(null, false, {message: "Invalid Password"})
+			}
+			console.log('logged')
+			return done(null, user)
+		}).catch(err => {
+			console.log(err)
+			done(err)
+		})
+	})
 )
 
 
 passport.serializeUser(function(user, done) {
-    done(null, user.id);
+	done(null, user.id);
 });
   
 passport.deserializeUser(function(id, done) {
-    console.log('deserialize');
-    User.findOne({where: {id: id}}).then(user=> {
-        done(null, user);
-    }).catch(err => {
-        done(err)
-    })
+	console.log('deserialize');
+	User.findOne({where: {id: id}}).then(user=> {
+		done(null, user);
+	}).catch(err => {
+		done(err)
+	})
 });
 
 // passport.use(new LocalStrategy(

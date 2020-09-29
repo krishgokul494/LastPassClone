@@ -4,19 +4,20 @@
     "password": null,
     "database": "lastpass",
     "host": "127.0.0.1",
-    "dialect": "mysql"
+    "dialect": "mysql",
+    "logging": true 
   },
   "test": {
     "username": "root",
     "password": null,
-    "database": "database_test",
+    "database": "lastpass",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
   "production": {
     "username": "root",
     "password": null,
-    "database": "database_production",
+    "database": "lastpass",
     "host": "127.0.0.1",
     "dialect": "mysql"
   }
